@@ -20,8 +20,10 @@ class _HomeScreenState extends State<HomeScreen> {
           future: getTopAnimeList(),
           builder: (context, AsyncSnapshot<List<TopAiringAnime>> snapshot){
             return ListView.builder(
+              physics: BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
-                itemCount: TopList.length, itemBuilder: (context, index){
+                itemCount: 10,
+                itemBuilder: (context, index){
               return AnimeCard(snapshot.data![index].animeTitle.toString(), snapshot.data![index].animeImg.toString());
             }
             );
