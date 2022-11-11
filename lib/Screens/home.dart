@@ -11,7 +11,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<TopAiringAnime> topList = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
